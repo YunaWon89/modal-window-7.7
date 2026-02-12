@@ -61,11 +61,21 @@ text-shadow: 0px 0px 5px yellow, 0px -5px 3px red;
 }
 .modal-content{
 display: flex;
-justify-content: center;
+border: 2px;
+ border-style: outset;
+ border-width: 5px;
+ border-color: rgb(236, 201, 206);
+ border-radius: 20px;
+ background-color: azure;
+ margin-top: 20px;
 align-items: center;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+gap: 20px;
+padding-left: 5px;
 animation: Slide;
 animation-duration: 5s;
+transform: translateY(600px);
+z-index: 1;
 }
 
 @keyframes Slide {
