@@ -58,7 +58,7 @@ body {
   justify-content: center;
 position: fixed; top: 0; left: 0; right: 0; bottom: 0;
 z-index: 1000;
-background: linear-gradient(skyblue, lightgreen);
+
 background-repeat: no-repeat;
 box-shadow: 5px 5px 5px black;
 text-shadow: 0px 0px 5px yellow, 0px -5px 3px red;
@@ -74,8 +74,7 @@ border: 2px;
  background-color: azure;
  margin-top: 20px;
 align-items: center;
-position: static;
-z-index: 1;
+z-index: 2;
 }
 .modal-content h2{
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -92,10 +91,13 @@ margin: 10px;
 }
 
 .modal-backdrop{
-    background-color:  rgba(0,0,0,0.5);
-    position: static;
+    
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
     z-index: 1;
-   
+   background: linear-gradient(skyblue, lightgreen);
+opacity: 0.5;
+
 }
 
 @media (min-width: 768px) {
