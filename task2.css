@@ -52,7 +52,12 @@ body {
 
 /* Создайте стили для модального окна согласно требованиям */
 .modal{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+z-index: 1000;
 background: linear-gradient(skyblue, lightgreen);
 background-repeat: no-repeat;
 box-shadow: 5px 5px 5px black;
@@ -69,13 +74,16 @@ border: 2px;
  background-color: azure;
  margin-top: 20px;
 align-items: center;
+position: static;
+z-index: 1;
+}
+.modal-content h2{
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 gap: 20px;
 padding-left: 5px;
 animation: Slide;
 animation-duration: 5s;
-transform: translateY(600px);
-z-index: 1;
+margin: 10px;
 }
 
 @keyframes Slide {
@@ -85,5 +93,31 @@ z-index: 1;
 
 .modal-backdrop{
     background-color:  rgba(0,0,0,0.5);
+    position: static;
+    z-index: 1;
    
+}
+
+@media (min-width: 768px) {
+.modal-content{
+  display: flex;
+  align-items: center;
+  background-color: cyan;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: larger;
+}
+}
+
+@media (min-width: 1024px) {
+.modal-content{
+  animation: BigScreen;
+  animation-duration: 5s;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: larger;
+}
+}
+
+@keyframes BigScreen {
+  from{margin-left: 100%}
+  to{margin-left: 0%;}
 }
